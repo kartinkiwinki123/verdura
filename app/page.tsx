@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
+import BesparingCalculator from '@/components/BesparingCalculator';
 
 export const metadata: Metadata = {
   title: 'Verdura - Duurzame Energie Voor Uw Thuis',
@@ -77,6 +78,7 @@ const stats = [
   { value: '15+', label: 'Jaar ervaring' },
 ];
 
+
 // ─── Component ──────────────────────────────────────────────────────────────
 
 export default function HomePage() {
@@ -123,7 +125,7 @@ export default function HomePage() {
               </span>
             </div>
           </div>
-          
+
           <div className={styles.heroVisual}>
             <img
               src="https://res.cloudinary.com/drcr4ekja/image/upload/q_auto/f_auto/v1777815918/SLIMME_THERMOSTAAT_zoirlo.png"
@@ -162,6 +164,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* ── Besparing Calculator ── */}
+      <BesparingCalculator />
 
       {/* ── Subsidie banner ────────────────────────────────────────────── */}
       <section className={`section-sm ${styles.subsidieBanner}`}>

@@ -127,7 +127,7 @@ export default function ContactPage() {
             <div className={styles.subsidieHint}>
               <span className="badge badge-amber">💡 Subsidie tip</span>
               <p className={`body-sm ${styles.subsidieHintText}`}>
-                Veel gemeenten hebben nog budget beschikbaar voor 2025.
+                Veel gemeenten hebben nog budget beschikbaar voor 2026.
                 Vraag snel aan, want het is op is op.
               </p>
             </div>

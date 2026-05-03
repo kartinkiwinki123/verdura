@@ -248,7 +248,7 @@ export default function AanbodPage() {
             <h1 className={styles.heroTitel}>
               Alles voor een{' '}
               <span className={styles.heroAccent}>energieneutraal</span>{' '}
-              <span className={styles.heroAccentTwee}>thuis</span>
+              <span>thuis</span>
             </h1>
             <p className={styles.heroSubtitel}>
               Van zonnepanelen tot warmtepompen en slimme opslag. Verdura begeleidt je van advies tot installatie, zodat jij er geen omkijken naar hebt.

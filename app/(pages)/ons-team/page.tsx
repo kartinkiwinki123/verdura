@@ -154,7 +154,7 @@ export default function OnsTeamPage() {
               <span className={styles.heroLabel}>Over Verdura</span>
               <h1 className={styles.heroTitel}>
                 Mensen die{' '}
-                <span className={styles.heroAccent}>geloven</span>{' '}
+                <span className={styles.heroAccent}>geloven</span>{' '}<br />
                 in wat ze doen
               </h1>
               <p className={styles.heroSubtitel}>

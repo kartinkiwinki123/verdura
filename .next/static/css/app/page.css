@@ -185,7 +185,7 @@
 
 /* ─── Stats bar ─────────────────────────────────────────────────────────── */
 .page_statsBar__6qhr9 {
-  background: var(--green-deep);
+  background: var(--green-muted);
   padding: var(--space-8) 0;
 }
 
@@ -208,18 +208,19 @@
   font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 400;
-  color: var(--pollen);
+  color: var(--amber);
   letter-spacing: -0.02em;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.133);
 }
 
 .page_statLabel__2jNx3 {
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.6);
+  color: var(--text-secondary);
 }
 
 /* ─── Subsidie banner ───────────────────────────────────────────────────── */
 .page_subsidieBanner__lERJd {
-  background: var(--linen);
+  background: var(--platinum);
   border-top: 1px solid rgba(247,156,29,0.15);
   border-bottom: 1px solid rgba(247,156,29,0.15);
 }
@@ -444,3 +445,789 @@
   .page_heroActions__uE8fj { flex-direction: column; }
 }
 
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./components/BesparingCalculator.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+/* ─── SECTIE ──────────────────────────────────────────────────────────────── */
+.BesparingCalculator_sectie__4ehol {
+  padding: var(--space-24) 0;
+  background: var(--green-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+.BesparingCalculator_sectie__4ehol::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 0% 50%, rgba(50, 164, 67, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 100% 20%, rgba(247, 156, 29, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.BesparingCalculator_inner__a5W_R {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  grid-gap: var(--space-16);
+  gap: var(--space-16);
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── LINKER UITLEG ───────────────────────────────────────────────────────── */
+.BesparingCalculator_uitleg__2L4za {
+  padding-top: var(--space-6);
+}
+
+.BesparingCalculator_uitlegLabel__d_iXZ {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pollen);
+  margin-bottom: var(--space-4);
+}
+
+.BesparingCalculator_uitlegTitel__gU_Xo {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: var(--space-5);
+}
+
+.BesparingCalculator_uitlegTekst__sND2R {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 300;
+  margin-bottom: var(--space-8);
+}
+
+.BesparingCalculator_uitlegPunten__aoAxS {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.BesparingCalculator_uitlegPunt__smM_f {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.BesparingCalculator_uitlegCheck__SoiNu {
+  color: var(--green-mid);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─── CALCULATOR KAART ────────────────────────────────────────────────────── */
+.BesparingCalculator_calculator__5m7p6 {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+}
+
+/* ─── STAP INDICATOR ──────────────────────────────────────────────────────── */
+.BesparingCalculator_stapIndicator__zLKW5 {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.BesparingCalculator_stapDot__xjIn3 {
+  height: 3px;
+  flex: 1 1;
+  border-radius: 2px;
+  background: var(--platinum);
+  transition: background 0.3s ease;
+}
+
+.BesparingCalculator_stapDotKlaar__sNr_5 {
+  background: var(--green-mid);
+}
+
+.BesparingCalculator_stapDotActief__Okvwg {
+  background: var(--green-mid);
+  opacity: 0.5;
+}
+
+/* ─── STAP CONTENT ────────────────────────────────────────────────────────── */
+.BesparingCalculator_stapContent__oJJfi {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.BesparingCalculator_stapTitel__rbtxT {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.BesparingCalculator_stapSubtitel__9I7HY {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: calc(-1 * var(--space-3)) 0 0;
+}
+
+/* ─── WONINGTYPE ──────────────────────────────────────────────────────────── */
+.BesparingCalculator_woningGrid__JGPK0 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: var(--space-3);
+  gap: var(--space-3);
+}
+
+.BesparingCalculator_woningKaart__PmJf8 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--platinum);
+  background: var(--surface-bg);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  position: relative;
+}
+
+.BesparingCalculator_woningKaart__PmJf8:hover {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+}
+
+.BesparingCalculator_woningKaartActief__BqOCp {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+  box-shadow: var(--shadow-glow);
+}
+
+.BesparingCalculator_woningKaartGeblokkeerd__uVD0i {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.BesparingCalculator_woningKaartGeblokkeerd__uVD0i:hover {
+  border-color: #E05C00;
+  background: #FFF0E6;
+}
+
+.BesparingCalculator_woningIcon__12g6i {
+  font-size: 1.8rem;
+}
+
+.BesparingCalculator_woningLabel__YsjTd {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.BesparingCalculator_woningSubLabel__uHKGk {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.BesparingCalculator_woningBlok__DXVyx {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #E05C00;
+  background: #FFF0E6;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  margin-top: var(--space-1);
+}
+
+/* ─── GEBLOKKEERD ─────────────────────────────────────────────────────────── */
+.BesparingCalculator_geblokkeerd__cHZYR {
+  text-align: center;
+  padding: var(--space-6) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.BesparingCalculator_geblokkeedIcon__WAweH {
+  font-size: 2.5rem;
+}
+
+.BesparingCalculator_geblokkeedTekst__zLoBv {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 400px;
+  margin: 0;
+}
+
+.BesparingCalculator_geblokkeedBtns__nzVzU {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-2);
+}
+
+/* ─── TOGGLE ──────────────────────────────────────────────────────────────── */
+.BesparingCalculator_toggleRij__Go__F {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--space-3);
+  gap: var(--space-3);
+}
+
+.BesparingCalculator_toggleKnop__CmlCt {
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--platinum);
+  background: var(--surface-bg);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.BesparingCalculator_toggleKnop__CmlCt:hover {
+  border-color: var(--green-mid);
+  color: var(--green-deep);
+}
+
+.BesparingCalculator_toggleKnopActief__1z_C6 {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+  color: var(--green-deep);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ─── SLIDER ──────────────────────────────────────────────────────────────── */
+.BesparingCalculator_aantalPanelenWrap__SMpgA {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  background: var(--surface-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.BesparingCalculator_sliderLabel__Ex7qH {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.BesparingCalculator_sliderWaarde__jLmJg {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--green-mid);
+}
+
+.BesparingCalculator_slider__4EWf6 {
+  width: 100%;
+  accent-color: var(--green-mid);
+  height: 4px;
+  cursor: pointer;
+}
+
+.BesparingCalculator_sliderToelichting__hqbiW {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+/* ─── GEEN PANELEN INFO ───────────────────────────────────────────────────── */
+.BesparingCalculator_geenPanelenInfo__mN0lu {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background: var(--green-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  font-size: 0.875rem;
+  color: var(--green-deep);
+  line-height: 1.6;
+}
+
+.BesparingCalculator_geenPanelenIcon__A73vU {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ─── PERSONEN ────────────────────────────────────────────────────────────── */
+.BesparingCalculator_personenRij__I1E46 {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.BesparingCalculator_personenKnop__mYdcx {
+  flex: 1 1;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--platinum);
+  background: var(--surface-bg);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.BesparingCalculator_personenKnop__mYdcx:hover {
+  border-color: var(--green-mid);
+  color: var(--green-deep);
+}
+
+.BesparingCalculator_personenKnopActief__D93Fx {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+  color: var(--green-deep);
+  box-shadow: var(--shadow-glow);
+}
+
+.BesparingCalculator_personenToelichting__yWwtP {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ─── APPARATEN ───────────────────────────────────────────────────────────── */
+.BesparingCalculator_apparatenLijst__olgXb {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.BesparingCalculator_apparaatKnop__R4y7X {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  grid-gap: var(--space-3);
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--platinum);
+  background: var(--surface-bg);
+  font-family: var(--font-body);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.BesparingCalculator_apparaatKnop__R4y7X:hover {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+}
+
+.BesparingCalculator_apparaatKnopActief__opsKr {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+}
+
+.BesparingCalculator_apparaatIcon__AF9ge {
+  font-size: 1.2rem;
+}
+
+.BesparingCalculator_apparaatLabel__wJzj5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.BesparingCalculator_apparaatKwh__jXWdX {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.BesparingCalculator_apparaatCheck__VUpsO {
+  color: var(--green-mid);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* ─── BATTERIJ VERGELIJK ──────────────────────────────────────────────────── */
+.BesparingCalculator_batterijVergelijk__hSWbB {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: var(--surface-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.BesparingCalculator_batterijOptie__UpWiH {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+.BesparingCalculator_batterijActief__Oi5Bq {
+  opacity: 1;
+}
+
+.BesparingCalculator_batterijPct__Ls8vH {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--green-mid);
+  line-height: 1;
+}
+
+.BesparingCalculator_batterijLabel__FQvqC {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.BesparingCalculator_batterijVs__po4FQ {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* ─── NAV KNOPPEN ─────────────────────────────────────────────────────────── */
+.BesparingCalculator_stapNav__k5KRY {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--platinum);
+}
+
+.BesparingCalculator_terugKnop__X4T86 {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: var(--space-2);
+  transition: color 0.15s ease;
+}
+
+.BesparingCalculator_terugKnop__X4T86:hover {
+  color: var(--text-primary);
+}
+
+.BesparingCalculator_verderKnop__HIRZO {
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: var(--green-mid);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(50, 164, 67, 0.3);
+  transition: all 0.18s ease;
+}
+
+.BesparingCalculator_verderKnop__HIRZO:hover:not(:disabled) {
+  background: #2d9a3d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(50, 164, 67, 0.4);
+}
+
+.BesparingCalculator_verderKnop__HIRZO:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ─── UITKOMST ────────────────────────────────────────────────────────────── */
+.BesparingCalculator_uitkomstHeader__rNA_s {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.BesparingCalculator_uitkomstTitel__er6Zg {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.BesparingCalculator_disclaimer__fWzBL {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: #FFF9EC;
+  border: 1px solid rgba(247, 156, 29, 0.2);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.BesparingCalculator_besparingBlokken__5H45x {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.BesparingCalculator_besparingHoofd__Y25Oq {
+  background: var(--green-deep);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.BesparingCalculator_besparingLabel__E7Xb7 {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-muted);
+}
+
+.BesparingCalculator_besparingBedrag__6N_B3 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.BesparingCalculator_besparingMaand__X33Xa {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.BesparingCalculator_besparingDetails__KGlxN {
+  background: var(--surface-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.BesparingCalculator_besparingRegel__y6SpX {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.BesparingCalculator_besparingRegel__y6SpX span:last-child {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.BesparingCalculator_besparingRegelTotaal__T2aHR {
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--platinum);
+  font-weight: 500;
+}
+
+/* ─── LEAD FORMULIER ──────────────────────────────────────────────────────── */
+.BesparingCalculator_leadFormWrap__eUfFM {
+  border-top: 1px solid var(--platinum);
+  padding-top: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.BesparingCalculator_leadIntro__RngwO {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.BesparingCalculator_leadForm__US4G6 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.BesparingCalculator_leadInput__z99o7 {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--platinum);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background: var(--white);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.BesparingCalculator_leadInput__z99o7:focus {
+  border-color: var(--green-mid);
+  box-shadow: var(--shadow-glow);
+}
+
+.BesparingCalculator_leadInput__z99o7::placeholder {
+  color: var(--text-muted);
+}
+
+.BesparingCalculator_leadSubmit__ZzUBq {
+  padding: 14px;
+  border-radius: var(--radius-pill);
+  background: var(--amber);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(247, 156, 29, 0.35);
+  transition: all 0.18s ease;
+}
+
+.BesparingCalculator_leadSubmit__ZzUBq:hover:not(:disabled) {
+  background: #e88e10;
+  box-shadow: 0 4px 16px rgba(247, 156, 29, 0.45);
+  transform: translateY(-1px);
+}
+
+.BesparingCalculator_leadSubmit__ZzUBq:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.BesparingCalculator_leadDisclaimer__T79Q4 {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0;
+}
+
+/* ─── BEDANKT ─────────────────────────────────────────────────────────────── */
+.BesparingCalculator_bedankt__r6OyX {
+  text-align: center;
+  padding: var(--space-8) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.BesparingCalculator_bedanktIcon__8URmU {
+  font-size: 2.5rem;
+}
+
+.BesparingCalculator_bedankt__r6OyX p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── GEDEELDE KNOPPEN ────────────────────────────────────────────────────── */
+.BesparingCalculator_ctaBtnPrimary__bsdv0 {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: var(--green-mid);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(50, 164, 67, 0.3);
+  transition: all 0.18s ease;
+}
+
+.BesparingCalculator_ctaBtnPrimary__bsdv0:hover {
+  background: #2d9a3d;
+  transform: translateY(-1px);
+}
+
+.BesparingCalculator_ctaBtnOutline__7FbxO {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1.5px solid var(--platinum);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.BesparingCalculator_ctaBtnOutline__7FbxO:hover {
+  border-color: var(--green-mid);
+  color: var(--green-deep);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .BesparingCalculator_inner__a5W_R {
+    grid-template-columns: 1fr;
+  }
+
+  .BesparingCalculator_uitleg__2L4za {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .BesparingCalculator_woningGrid__JGPK0 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .BesparingCalculator_toggleRij__Go__F {
+    grid-template-columns: 1fr;
+  }
+
+  .BesparingCalculator_personenRij__I1E46 {
+    gap: var(--space-2);
+  }
+
+  .BesparingCalculator_apparaatKnop__R4y7X {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .BesparingCalculator_apparaatKwh__jXWdX {
+    display: none;
+  }
+}

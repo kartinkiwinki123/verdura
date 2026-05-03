@@ -60,9 +60,9 @@
 
 .heroFloatImg {
   position: absolute;
-  top: -32px;
-  right: -48px;
-  width: 220px;
+  top: -68px;
+  right: -68px;
+  width: 320px;
   z-index: 10;
   filter: drop-shadow(0 16px 40px rgba(14, 64, 42, 0.35));
   animation: floatBob 5s ease-in-out infinite;
@@ -105,6 +105,7 @@
 .heroAccent {
   color: var(--pollen);
   font-style: italic;
+  font-weight: 600;
 }
 
 .heroSubtitel {

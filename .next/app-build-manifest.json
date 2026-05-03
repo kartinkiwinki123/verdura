@@ -18,6 +18,12 @@
       "static/css/app/(pages)/aanbod/page.css",
       "static/chunks/app/(pages)/aanbod/page.js"
     ],
+    "/(pages)/ons-team/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(pages)/ons-team/page.css",
+      "static/chunks/app/(pages)/ons-team/page.js"
+    ],
     "/(pages)/subsidie/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -29,17 +35,6 @@
       "static/chunks/main-app.js",
       "static/css/app/(pages)/contact/page.css",
       "static/chunks/app/(pages)/contact/page.js"
-    ],
-    "/(pages)/ons-team/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(pages)/ons-team/page.css",
-      "static/chunks/app/(pages)/ons-team/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

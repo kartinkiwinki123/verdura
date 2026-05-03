@@ -1,0 +1,779 @@
+/* ─── SECTIE ──────────────────────────────────────────────────────────────── */
+.sectie {
+  padding: var(--space-24) 0;
+  background: var(--green-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+.sectie::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 0% 50%, rgba(50, 164, 67, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 100% 20%, rgba(247, 156, 29, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--space-16);
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── LINKER UITLEG ───────────────────────────────────────────────────────── */
+.uitleg {
+  padding-top: var(--space-6);
+}
+
+.uitlegLabel {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pollen);
+  margin-bottom: var(--space-4);
+}
+
+.uitlegTitel {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: var(--space-5);
+}
+
+.uitlegTekst {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 300;
+  margin-bottom: var(--space-8);
+}
+
+.uitlegPunten {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.uitlegPunt {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.uitlegCheck {
+  color: var(--green-mid);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─── CALCULATOR KAART ────────────────────────────────────────────────────── */
+.calculator {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+}
+
+/* ─── STAP INDICATOR ──────────────────────────────────────────────────────── */
+.stapIndicator {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.stapDot {
+  height: 3px;
+  flex: 1;
+  border-radius: 2px;
+  background: var(--platinum);
+  transition: background 0.3s ease;
+}
+
+.stapDotKlaar {
+  background: var(--green-mid);
+}
+
+.stapDotActief {
+  background: var(--green-mid);
+  opacity: 0.5;
+}
+
+/* ─── STAP CONTENT ────────────────────────────────────────────────────────── */
+.stapContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.stapTitel {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+.stapSubtitel {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: calc(-1 * var(--space-3)) 0 0;
+}
+
+/* ─── WONINGTYPE ──────────────────────────────────────────────────────────── */
+.woningGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.woningKaart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--platinum);
+  background: var(--surface-bg);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  position: relative;
+}
+
+.woningKaart:hover {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+}
+
+.woningKaartActief {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+  box-shadow: var(--shadow-glow);
+}
+
+.woningKaartGeblokkeerd {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.woningKaartGeblokkeerd:hover {
+  border-color: #E05C00;
+  background: #FFF0E6;
+}
+
+.woningIcon {
+  font-size: 1.8rem;
+}
+
+.woningLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.woningSubLabel {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.woningBlok {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #E05C00;
+  background: #FFF0E6;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  margin-top: var(--space-1);
+}
+
+/* ─── GEBLOKKEERD ─────────────────────────────────────────────────────────── */
+.geblokkeerd {
+  text-align: center;
+  padding: var(--space-6) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.geblokkeedIcon {
+  font-size: 2.5rem;
+}
+
+.geblokkeedTekst {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 400px;
+  margin: 0;
+}
+
+.geblokkeedBtns {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-2);
+}
+
+/* ─── TOGGLE ──────────────────────────────────────────────────────────────── */
+.toggleRij {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.toggleKnop {
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--platinum);
+  background: var(--surface-bg);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.toggleKnop:hover {
+  border-color: var(--green-mid);
+  color: var(--green-deep);
+}
+
+.toggleKnopActief {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+  color: var(--green-deep);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ─── SLIDER ──────────────────────────────────────────────────────────────── */
+.aantalPanelenWrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  background: var(--surface-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.sliderLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.sliderWaarde {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--green-mid);
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--green-mid);
+  height: 4px;
+  cursor: pointer;
+}
+
+.sliderToelichting {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+/* ─── GEEN PANELEN INFO ───────────────────────────────────────────────────── */
+.geenPanelenInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background: var(--green-light);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  font-size: 0.875rem;
+  color: var(--green-deep);
+  line-height: 1.6;
+}
+
+.geenPanelenIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* ─── PERSONEN ────────────────────────────────────────────────────────────── */
+.personenRij {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.personenKnop {
+  flex: 1;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--platinum);
+  background: var(--surface-bg);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.personenKnop:hover {
+  border-color: var(--green-mid);
+  color: var(--green-deep);
+}
+
+.personenKnopActief {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+  color: var(--green-deep);
+  box-shadow: var(--shadow-glow);
+}
+
+.personenToelichting {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ─── APPARATEN ───────────────────────────────────────────────────────────── */
+.apparatenLijst {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.apparaatKnop {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--platinum);
+  background: var(--surface-bg);
+  font-family: var(--font-body);
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.apparaatKnop:hover {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+}
+
+.apparaatKnopActief {
+  border-color: var(--green-mid);
+  background: var(--green-light);
+}
+
+.apparaatIcon {
+  font-size: 1.2rem;
+}
+
+.apparaatLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.apparaatKwh {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.apparaatCheck {
+  color: var(--green-mid);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* ─── BATTERIJ VERGELIJK ──────────────────────────────────────────────────── */
+.batterijVergelijk {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: var(--surface-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.batterijOptie {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+.batterijActief {
+  opacity: 1;
+}
+
+.batterijPct {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--green-mid);
+  line-height: 1;
+}
+
+.batterijLabel {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.batterijVs {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* ─── NAV KNOPPEN ─────────────────────────────────────────────────────────── */
+.stapNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--platinum);
+}
+
+.terugKnop {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: var(--space-2);
+  transition: color 0.15s ease;
+}
+
+.terugKnop:hover {
+  color: var(--text-primary);
+}
+
+.verderKnop {
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: var(--green-mid);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(50, 164, 67, 0.3);
+  transition: all 0.18s ease;
+}
+
+.verderKnop:hover:not(:disabled) {
+  background: #2d9a3d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(50, 164, 67, 0.4);
+}
+
+.verderKnop:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ─── UITKOMST ────────────────────────────────────────────────────────────── */
+.uitkomstHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.uitkomstTitel {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.disclaimer {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: #FFF9EC;
+  border: 1px solid rgba(247, 156, 29, 0.2);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.besparingBlokken {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.besparingHoofd {
+  background: var(--green-deep);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.besparingLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-muted);
+}
+
+.besparingBedrag {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.besparingMaand {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.besparingDetails {
+  background: var(--surface-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.besparingRegel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.besparingRegel span:last-child {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.besparingRegelTotaal {
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--platinum);
+  font-weight: 500;
+}
+
+/* ─── LEAD FORMULIER ──────────────────────────────────────────────────────── */
+.leadFormWrap {
+  border-top: 1px solid var(--platinum);
+  padding-top: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.leadIntro {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.leadForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.leadInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--platinum);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background: var(--white);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.leadInput:focus {
+  border-color: var(--green-mid);
+  box-shadow: var(--shadow-glow);
+}
+
+.leadInput::placeholder {
+  color: var(--text-muted);
+}
+
+.leadSubmit {
+  padding: 14px;
+  border-radius: var(--radius-pill);
+  background: var(--amber);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(247, 156, 29, 0.35);
+  transition: all 0.18s ease;
+}
+
+.leadSubmit:hover:not(:disabled) {
+  background: #e88e10;
+  box-shadow: 0 4px 16px rgba(247, 156, 29, 0.45);
+  transform: translateY(-1px);
+}
+
+.leadSubmit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.leadDisclaimer {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 0;
+}
+
+/* ─── BEDANKT ─────────────────────────────────────────────────────────────── */
+.bedankt {
+  text-align: center;
+  padding: var(--space-8) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.bedanktIcon {
+  font-size: 2.5rem;
+}
+
+.bedankt p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── GEDEELDE KNOPPEN ────────────────────────────────────────────────────── */
+.ctaBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: var(--green-mid);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(50, 164, 67, 0.3);
+  transition: all 0.18s ease;
+}
+
+.ctaBtnPrimary:hover {
+  background: #2d9a3d;
+  transform: translateY(-1px);
+}
+
+.ctaBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1.5px solid var(--platinum);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.ctaBtnOutline:hover {
+  border-color: var(--green-mid);
+  color: var(--green-deep);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .uitleg {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .woningGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .toggleRij {
+    grid-template-columns: 1fr;
+  }
+
+  .personenRij {
+    gap: var(--space-2);
+  }
+
+  .apparaatKnop {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .apparaatKwh {
+    display: none;
+  }
+}
