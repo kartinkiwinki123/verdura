@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import CustomCursor from '@/components/Customcursor';
+import CustomCursor from '@/components/CustomCursor';
 
 export const metadata: Metadata = {
   title: {
