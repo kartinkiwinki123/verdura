@@ -1,0 +1,597 @@
+/* ─── MAIN ────────────────────────────────────────────────────────────── */
+.main {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ─── HERO ────────────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-height) + var(--space-12)) 0 var(--space-20);
+  overflow: hidden;
+}
+
+.heroBgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: 0;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 64, 42, 0.4);
+  z-index: 1;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* Wrap geeft de float-afbeelding een ankerpunt */
+.heroGlassWrap {
+  position: relative;
+  display: inline-block;
+  max-width: 680px;
+  width: 100%;
+}
+
+.heroGlass {
+  background: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12) var(--space-10);
+  padding-right: calc(var(--space-10) + 120px); /* ruimte voor float */
+}
+
+.heroFloatImg {
+  position: absolute;
+  top: -32px;
+  right: -48px;
+  width: 220px;
+  z-index: 10;
+  filter: drop-shadow(0 16px 40px rgba(14, 64, 42, 0.35));
+  animation: floatBob 5s ease-in-out infinite;
+}
+
+.heroFloatImgEl {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50%       { transform: translateY(-10px) rotate(1deg); }
+}
+
+.heroLabel {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pollen);
+  margin-bottom: var(--space-5);
+  animation: fadeUp 0.5s ease both;
+}
+
+.heroTitel {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: var(--space-5);
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+
+.heroAccent {
+  color: var(--pollen);
+  font-style: italic;
+}
+
+.heroSubtitel {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 300;
+  margin-bottom: var(--space-8);
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+
+.heroBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 28px;
+  border-radius: var(--radius-pill);
+  background: var(--amber);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(247, 156, 29, 0.4);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+
+.heroBtn:hover {
+  background: #e88e10;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(247, 156, 29, 0.5);
+}
+
+/* ─── GEDEELDE LAYOUT ─────────────────────────────────────────────────── */
+.sectionInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.sectionLabel {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-mid);
+  margin-bottom: var(--space-4);
+}
+
+.sectionTitel {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+}
+
+/* ─── WAAROM SECTIE ───────────────────────────────────────────────────── */
+.waaromSectie {
+  padding: var(--space-24) 0;
+  background: var(--surface-bg);
+}
+
+.waaromGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.waaromTekst {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionSubtitel {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin-bottom: var(--space-8);
+}
+
+.waaromLijst {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.waaromItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.waaromCheck {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.waaromBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 28px;
+  border-radius: var(--radius-pill);
+  background: var(--green-mid);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(50, 164, 67, 0.3);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  align-self: flex-start;
+}
+
+.waaromBtn:hover {
+  background: #2d9a3d;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(50, 164, 67, 0.4);
+}
+
+.waaromStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.statBlok {
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(14, 64, 42, 0.07);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.statBlok:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.statCijfer {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 300;
+  color: var(--green-mid);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* ─── WAARDEN ─────────────────────────────────────────────────────────── */
+.waardenSectie {
+  padding: var(--space-24) 0;
+  background: var(--green-deep);
+}
+
+.waardenSectie .sectionLabel {
+  color: var(--green-muted);
+}
+
+.waardenSectie .sectionTitel {
+  color: var(--white);
+}
+
+.waardenGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-10);
+}
+
+.waardeKaart {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease, background 0.2s ease;
+}
+
+.waardeKaart.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.waardeKaart:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.waardeIcon {
+  font-size: 1.8rem;
+}
+
+.waardeTitel {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--white);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.waardeTekst {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* ─── TEAM ────────────────────────────────────────────────────────────── */
+.teamSectie {
+  padding: var(--space-24) 0;
+  background: var(--surface-bg);
+}
+
+.teamIntro {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  font-weight: 300;
+  max-width: 580px;
+  margin-bottom: var(--space-12);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+.teamKaart {
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(14, 64, 42, 0.07);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.22s ease;
+}
+
+.teamKaart.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.teamKaart:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.kaart_groen { border-top: 3px solid var(--green-mid); }
+.kaart_amber { border-top: 3px solid var(--amber); }
+.kaart_blauw { border-top: 3px solid #3B82C4; }
+.kaart_licht { border-top: 3px solid var(--green-muted); }
+
+.kaartTop {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar_groen { background: var(--green-light); color: var(--green-deep); }
+.avatar_amber  { background: #FFF4D9; color: #8A5500; }
+.avatar_blauw  { background: var(--sky-pale); color: #1A4A8A; }
+.avatar_licht  { background: var(--platinum); color: var(--text-secondary); }
+
+.avatarPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarInitialen {
+  display: none; /* zichtbaar als foto beschikbaar is als fallback */
+}
+
+.kaartMeta {
+  flex: 1;
+  min-width: 0;
+}
+
+.kaartNaam {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin: 0 0 2px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kaartRol {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.kaartBio {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin: 0;
+  flex: 1;
+}
+
+.kaartTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.tag_groen { background: var(--green-light); color: var(--green-deep); }
+.tag_amber  { background: #FFF4D9; color: #8A5500; }
+.tag_blauw  { background: var(--sky-pale); color: #1A4A8A; }
+.tag_licht  { background: var(--platinum); color: var(--text-secondary); }
+
+.kaartEmail {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--platinum);
+  transition: color 0.15s ease;
+  margin-top: auto;
+}
+
+.kaartEmail:hover {
+  color: var(--green-mid);
+}
+
+.teamPlaceholderNote {
+  margin-top: var(--space-8);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+}
+
+/* ─── CTA ─────────────────────────────────────────────────────────────── */
+.cta {
+  background: var(--green-deep);
+  padding: var(--space-24) 0;
+}
+
+.ctaInner {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.ctaLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-muted);
+  margin: 0;
+}
+
+.ctaTitel {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin: 0;
+}
+
+.ctaTekst {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  margin: 0;
+}
+
+.ctaBtn {
+  margin-top: var(--space-3);
+  padding: 15px 34px;
+  border-radius: var(--radius-pill);
+  background: var(--amber);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(247, 156, 29, 0.4);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.ctaBtn:hover {
+  background: #e88e10;
+  box-shadow: 0 6px 20px rgba(247, 156, 29, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .waardenGrid,
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .waaromGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroGlass {
+    padding-right: var(--space-10);
+  }
+
+  .heroFloatImg {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .waardenGrid,
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .waaromStats {
+    grid-template-columns: 1fr 1fr;
+  }
+}

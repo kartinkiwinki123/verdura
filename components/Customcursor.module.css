@@ -1,0 +1,70 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  /* Center the icon on the cursor point */
+  margin-left: -12px;
+  margin-top: -12px;
+  transition: opacity 0.3s ease;
+  will-change: transform;
+}
+
+.cursor svg {
+  transition: width 0.2s ease, height 0.2s ease, color 0.2s ease;
+  filter: drop-shadow(0 2px 4px rgba(14, 64, 42, 0.25));
+}
+
+.cursorVisible {
+  opacity: 1;
+}
+
+.cursorHover {
+  margin-left: -16px;
+  margin-top: -16px;
+}
+
+/* Trailing ring */
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  width: 36px;
+  height: 36px;
+  margin-left: -18px;
+  margin-top: -18px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(50, 164, 67, 0.4);
+  transition:
+    opacity 0.3s ease,
+    width 0.2s ease,
+    height 0.2s ease,
+    margin 0.2s ease,
+    border-color 0.2s ease;
+  will-change: transform;
+}
+
+.ringVisible {
+  opacity: 1;
+}
+
+.ringHover {
+  width: 52px;
+  height: 52px;
+  margin-left: -26px;
+  margin-top: -26px;
+  border-color: rgba(247, 156, 29, 0.5);
+}
+
+/* Hide on touch devices */
+@media (pointer: coarse) {
+  .cursor,
+  .ring {
+    display: none;
+  }
+}

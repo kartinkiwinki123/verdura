@@ -1,0 +1,494 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./app/(pages)/subsidie/subsidies.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+/* ─── MAIN ────────────────────────────────────────────────────────────── */
+.subsidies_main__MlWHb {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ─── HERO ────────────────────────────────────────────────────────────── */
+.subsidies_hero__JqpfT {
+  position: relative;
+  padding: calc(var(--nav-height) + var(--space-16)) 0 var(--space-16);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.subsidies_heroBgImage__z1rhr {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.subsidies_heroOverlay__vjecL {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 64, 42, 0.35);
+  z-index: 1;
+}
+
+.subsidies_heroInner__96xRc {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  width: 100%;
+}
+
+.subsidies_heroGlass__KFGYH {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12) var(--space-10);
+  max-width: 780px;
+}
+
+.subsidies_heroLabel__Pvxrm {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pollen);
+  margin-bottom: var(--space-5);
+  animation: subsidies_fadeUp__3LHzE 0.5s ease both;
+}
+
+.subsidies_heroTitel__hE2tP {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--white);
+  margin-bottom: var(--space-6);
+  animation: subsidies_fadeUp__3LHzE 0.6s 0.1s ease both;
+}
+
+.subsidies_heroAccent__4q9hM {
+  color: var(--pollen);
+  font-style: italic;
+}
+
+.subsidies_heroSubtitel__nicQf {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  margin-bottom: var(--space-10);
+  max-width: 580px;
+  animation: subsidies_fadeUp__3LHzE 0.6s 0.2s ease both;
+}
+
+.subsidies_heroStats__G8Q6n {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  animation: subsidies_fadeUp__3LHzE 0.6s 0.3s ease both;
+}
+
+.subsidies_stat__GTifi {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.subsidies_statCijfer__m3YmI {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.subsidies_statLabel__fwCPE {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.02em;
+}
+
+.subsidies_statDivider__p9vD_ {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ─── UITLEGBALK ──────────────────────────────────────────────────────── */
+.subsidies_uitleg__5WnAF {
+  background: #FFF9EC;
+  border-top: 1px solid rgba(247, 156, 29, 0.2);
+  border-bottom: 1px solid rgba(247, 156, 29, 0.2);
+  padding: var(--space-4) 0;
+}
+
+.subsidies_uitlegInner__Ud7od {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.subsidies_uitlegIcon__LSrQl {
+  color: var(--amber);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.subsidies_uitlegInner__Ud7od p {
+  font-size: 0.85rem;
+  color: #7A5A00;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ─── REGELINGEN ──────────────────────────────────────────────────────── */
+.subsidies_regelingen__x0qHg {
+  padding: var(--space-16) 0 var(--space-24);
+}
+
+.subsidies_regelingenInner__fPHRJ {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ─── KAART ───────────────────────────────────────────────────────────── */
+.subsidies_kaart__CmzjK {
+  background: var(--surface-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(14, 64, 42, 0.08);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease, box-shadow 0.22s ease;
+}
+
+.subsidies_kaart__CmzjK.subsidies_visible__qgpx7 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subsidies_kaart__CmzjK:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* kleur-accenten per kaart */
+.subsidies_kaart_groen__EBYpJ { border-left: 3px solid var(--green-mid); }
+.subsidies_kaart_amber__h8cWU { border-left: 3px solid var(--amber); }
+.subsidies_kaart_signaal___y1_6 { border-left: 3px solid #E05C00; }
+.subsidies_kaart_neutraal___fHxl { border-left: 3px solid var(--green-muted); }
+.subsidies_kaart_blauw__vXSRP { border-left: 3px solid #3B82C4; }
+
+/* ─── KAART HEADER ────────────────────────────────────────────────────── */
+.subsidies_kaartHeader__uTC0C {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-6) var(--space-8);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  gap: var(--space-4);
+  transition: background 0.15s ease;
+}
+
+.subsidies_kaartHeader__uTC0C:hover {
+  background: var(--surface-bg);
+}
+
+.subsidies_kaartHeaderLinks__lt53Y {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+}
+
+.subsidies_kaartIcon__nEvHk {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.subsidies_kaartBadge__neVFN {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-2);
+}
+
+.subsidies_badge_groen__kFnit { background: var(--green-light); color: var(--green-deep); }
+.subsidies_badge_amber__4EVH5 { background: #FFF4D9; color: #8A5500; }
+.subsidies_badge_signaal__toACj { background: #FFF0E6; color: #C04A00; }
+.subsidies_badge_neutraal__SHBoS { background: var(--platinum); color: var(--text-secondary); }
+.subsidies_badge_blauw__gBWKx { background: var(--sky-pale); color: #1A4A8A; }
+
+.subsidies_kaartTitel__lryuD {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin: 0 0 var(--space-1);
+  letter-spacing: -0.01em;
+}
+
+.subsidies_kaartSubtitel__4ZJL_ {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin: 0;
+}
+
+.subsidies_kaartHeaderRechts__bA20f {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+.subsidies_kaartBedrag__DnoSd {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--green-mid);
+  white-space: nowrap;
+}
+
+.subsidies_kaart_signaal___y1_6 .subsidies_kaartBedrag__DnoSd { color: #E05C00; }
+.subsidies_kaart_neutraal___fHxl .subsidies_kaartBedrag__DnoSd { color: var(--text-muted); }
+.subsidies_kaart_blauw__vXSRP .subsidies_kaartBedrag__DnoSd { color: #3B82C4; }
+
+.subsidies_kaartChevron__8tOos {
+  color: var(--text-muted);
+  transition: transform 0.25s ease;
+  display: flex;
+  align-items: center;
+}
+
+.subsidies_kaartChevronOpen__PjgUK {
+  transform: rotate(180deg);
+}
+
+/* ─── KAART BODY ──────────────────────────────────────────────────────── */
+.subsidies_kaartBody___gulo {
+  padding: 0 var(--space-8) var(--space-8);
+  border-top: 1px solid var(--platinum);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-top: var(--space-6);
+}
+
+.subsidies_infoBlok__4u1hz {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.subsidies_infoKopje___KubH {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.subsidies_infoTekst___EcCf {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin: 0;
+}
+
+.subsidies_infoLijst__171C8 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.subsidies_infoItem__UsBGg {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.subsidies_infoCheck__QhvM7 {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--green-mid);
+}
+
+.subsidies_kaart_amber__h8cWU .subsidies_infoCheck__QhvM7 { color: var(--amber); }
+.subsidies_kaart_signaal___y1_6 .subsidies_infoCheck__QhvM7 { color: #E05C00; }
+.subsidies_kaart_neutraal___fHxl .subsidies_infoCheck__QhvM7 { color: var(--text-muted); }
+.subsidies_kaart_blauw__vXSRP .subsidies_infoCheck__QhvM7 { color: #3B82C4; }
+
+.subsidies_bronLink__7Uyp_ {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-top: 1px solid var(--platinum);
+  padding-top: var(--space-4);
+  transition: color 0.15s ease;
+  margin-top: var(--space-2);
+}
+
+.subsidies_bronLink__7Uyp_:hover {
+  color: var(--green-mid);
+}
+
+/* ─── CTA ─────────────────────────────────────────────────────────────── */
+.subsidies_cta__2hvTv {
+  background: var(--green-deep);
+  padding: var(--space-24) 0;
+}
+
+.subsidies_ctaInner__tbJfV {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.subsidies_ctaLabel__4sgXC {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-muted);
+  margin: 0;
+}
+
+.subsidies_ctaTitel__4gjRm {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin: 0;
+}
+
+.subsidies_ctaTekst__Yn1Jp {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  margin: 0;
+}
+
+.subsidies_ctaBtns__tB4dg {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-3);
+}
+
+.subsidies_ctaBtnPrimary__OLKLW {
+  padding: 14px 30px;
+  border-radius: var(--radius-pill);
+  background: var(--amber);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(247, 156, 29, 0.4);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.subsidies_ctaBtnPrimary__OLKLW:hover {
+  background: #e88e10;
+  box-shadow: 0 6px 20px rgba(247, 156, 29, 0.5);
+  transform: translateY(-2px);
+}
+
+.subsidies_ctaBtnOutline__9U1Cc {
+  padding: 14px 30px;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.subsidies_ctaBtnOutline__9U1Cc:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .subsidies_kaartHeader__uTC0C {
+    padding: var(--space-5) var(--space-5);
+    flex-wrap: wrap;
+  }
+
+  .subsidies_kaartHeaderRechts__bA20f {
+    width: 100%;
+    justify-content: space-between;
+    padding-left: calc(1.6rem + var(--space-5));
+  }
+
+  .subsidies_kaartBody___gulo {
+    padding: var(--space-5) var(--space-5) var(--space-6);
+  }
+
+  .subsidies_heroStats__G8Q6n {
+    gap: var(--space-5);
+  }
+
+  .subsidies_ctaBtns__tB4dg {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .subsidies_ctaBtnPrimary__OLKLW,
+  .subsidies_ctaBtnOutline__9U1Cc {
+    text-align: center;
+  }
+}

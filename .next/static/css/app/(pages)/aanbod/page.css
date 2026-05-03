@@ -1,0 +1,583 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./app/(pages)/aanbod/aanbod.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+/* ─── MAIN ────────────────────────────────────────────────────────────── */
+.aanbod_main__xz0Vf {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ─── HERO ────────────────────────────────────────────────────────────── */
+.aanbod_hero__sKhes {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  padding: var(--space-24) 0 var(--space-16);
+  overflow: hidden;
+}
+
+.aanbod_heroBg__nrHH1 {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 20%, rgba(50, 164, 67, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 10% 80%, rgba(247, 156, 29, 0.06) 0%, transparent 50%),
+    var(--surface-bg);
+  z-index: 0;
+}
+
+.aanbod_heroBgImage__dKi5J {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.aanbod_heroOverlay__TXRwY {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 64, 42, 0.25);
+  z-index: 1;
+}
+
+.aanbod_heroGlass___2Sqc {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12) var(--space-10);
+  max-width: 960px;
+  z-index: 2;
+}
+
+.aanbod_heroContainer__hRV3a {
+  position: relative;
+  z-index: 3;
+  /* rest blijft hetzelfde */
+}
+
+.aanbod_heroContainer__hRV3a {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.aanbod_heroLabel__EQf6r {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: var(--space-5);
+  animation: aanbod_fadeUp__XO1rI 0.5s ease forwards;
+}
+
+.aanbod_heroTitel__P3CDv {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 300;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--green-light);
+  max-width: 820px;
+  margin-bottom: var(--space-6);
+  animation: aanbod_fadeUp__XO1rI 0.6s 0.1s ease both;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.169);
+}
+
+.aanbod_heroAccent__BByF_ {
+  color: var(--green-mid);
+  font-style: italic;
+}
+
+.aanbod_heroAccentTwee__0h6dW {
+  color: var(green--light);
+  font-weight: 800;
+}
+
+.aanbod_heroSubtitel__fCadt {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--linen);
+  max-width: 580px;
+  font-weight: 300;
+  margin-bottom: var(--space-12);
+  animation: aanbod_fadeUp__XO1rI 0.6s 0.2s ease both;
+}
+
+.aanbod_heroNav__CGUyr {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  animation: aanbod_fadeUp__XO1rI 0.6s 0.32s ease both;
+}
+
+.aanbod_heroNavItem__6UN87 {
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(14, 64, 42, 0.15);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2a2a2a;
+  background: var(--gold-light);
+  transition: all 0.18s ease;
+  text-decoration: none;
+}
+
+.aanbod_heroNavItem__6UN87:hover {
+  border-color: var(--green-mid);
+  color: var(--green-deep);
+  background: var(--green-light);
+  transform: translateY(-1px);
+}
+
+.aanbod_heroScroll__16Ryu {
+  position: absolute;
+  bottom: var(--space-10);
+  left: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  animation: aanbod_fadeIn__10xVd 0.8s 0.6s ease both;
+}
+
+.aanbod_scrollLine__d_OYD {
+  width: 48px;
+  height: 1px;
+  background: var(--green-muted);
+  position: relative;
+  overflow: hidden;
+}
+
+.aanbod_scrollLine__d_OYD::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--green-mid);
+  animation: aanbod_scrollSlide__mwcrE 1.8s ease infinite;
+}
+
+@keyframes aanbod_scrollSlide__mwcrE {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ─── PRODUCT BLOK ────────────────────────────────────────────────────── */
+.aanbod_productBlok__JKRSR {
+  padding: var(--space-24) 0;
+  position: relative;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.aanbod_productBlok__JKRSR.aanbod_visible__tFVfJ {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.aanbod_productBlok__JKRSR.aanbod_licht__Y8oDT {
+  background: var(--surface-bg);
+}
+
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ {
+  background: var(--green-deep);
+}
+
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_productNaam__fZNeF,
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_productTagline__lVaWA,
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_productIntro__fDnSg,
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_productExtra__PAOPS,
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_productNummer__R9ZzC,
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_voordeel__7EFYL {
+  color: var(--text-inverse);
+}
+
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_checkIcon__lFE3r svg circle {
+  fill-opacity: 0.2;
+}
+
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_ctaBtnOutline__on55t {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_ctaBtnOutline__on55t:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.aanbod_productInner__59Qgr {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.aanbod_productContent__H3AGA {
+  display: grid;
+  grid-gap: var(--space-16);
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.aanbod_contentLinks__5ztEb {
+  grid-template-columns: 1fr 1fr;
+}
+
+.aanbod_contentRechts__tVPhX {
+  grid-template-columns: 1fr 1fr;
+  direction: rtl;
+}
+
+.aanbod_contentRechts__tVPhX > * {
+  direction: ltr;
+}
+
+.aanbod_productText__p_0fS {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.aanbod_productMeta__u8lOL {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.aanbod_badge__UDQ7P {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.aanbod_badge_amber__Ov_FF {
+  background: #FFF4D9;
+  color: #A06600;
+}
+
+.aanbod_badge_green__e0DE4 {
+  background: var(--green-light);
+  color: var(--green-deep);
+}
+
+.aanbod_badge_sky__CHZes {
+  background: var(--sky-pale);
+  color: #1A4A8A;
+}
+
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_badge_green__e0DE4 {
+  background: rgba(232, 245, 236, 0.15);
+  color: var(--green-muted);
+}
+
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_badge_amber__Ov_FF {
+  background: rgba(255, 244, 217, 0.15);
+  color: var(--pollen);
+}
+
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_badge_sky__CHZes {
+  background: rgba(212, 228, 249, 0.15);
+  color: var(--sky-pale);
+}
+
+.aanbod_productNummer__R9ZzC {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.aanbod_productNaam__fZNeF {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.aanbod_productTagline__lVaWA {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_productTagline__lVaWA {
+  color: var(--pollen);
+}
+
+.aanbod_productIntro__fDnSg {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin: 0;
+}
+
+.aanbod_voordelen__oXpt8 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 0;
+  margin: 0;
+}
+
+.aanbod_voordeel__7EFYL {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.aanbod_checkIcon__lFE3r {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.aanbod_productExtra__PAOPS {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-weight: 300;
+  font-style: italic;
+  border-left: 2px solid var(--green-muted);
+  padding-left: var(--space-4);
+  margin: 0;
+}
+
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_productExtra__PAOPS {
+  border-left-color: rgba(182, 217, 190, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.aanbod_productCta__koHcB {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.aanbod_ctaBtn__heJ_P {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 26px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  cursor: pointer;
+}
+
+.aanbod_ctaBtn__heJ_P:hover {
+  transform: translateY(-1px);
+}
+
+.aanbod_ctaBtnPrimary__6ftgx {
+  background: var(--green-mid);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(50, 164, 67, 0.3);
+}
+
+.aanbod_ctaBtnPrimary__6ftgx:hover {
+  background: #2d9a3d;
+  box-shadow: 0 4px 16px rgba(50, 164, 67, 0.4);
+}
+
+.aanbod_ctaBtnOutline__on55t {
+  background: transparent;
+  color: var(--green-deep);
+  border: 1.5px solid var(--green-mid);
+}
+
+.aanbod_ctaBtnOutline__on55t:hover {
+  background: var(--green-light);
+}
+
+/* ─── AFBEELDING ──────────────────────────────────────────────────────── */
+.aanbod_productAfbeelding__HevAW {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aanbod_afbeeldingWrapper__z0ONw {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.aanbod_productImg__j29At {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-xl);
+  transition: transform 0.5s ease;
+}
+
+.aanbod_afbeeldingWrapper__z0ONw:hover .aanbod_productImg__j29At {
+  transform: scale(1.03);
+}
+
+.aanbod_afbeeldingGlow__ZET_S {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(
+    135deg,
+    rgba(50, 164, 67, 0.08) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.aanbod_productBlok__JKRSR.aanbod_donker__dJL4_ .aanbod_afbeeldingGlow__ZET_S {
+  background: linear-gradient(
+    135deg,
+    rgba(247, 156, 29, 0.1) 0%,
+    transparent 60%
+  );
+}
+
+/* ─── CTA BLOK ────────────────────────────────────────────────────────── */
+.aanbod_ctaBlok__1qpGO {
+  background: var(--green-deep);
+  padding: var(--space-24) 0;
+  text-align: center;
+}
+
+.aanbod_ctaBlokInner__sCBHs {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.aanbod_ctaBlokLabel__w4RQd {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-muted);
+}
+
+.aanbod_ctaBlokTitel__j1LWV {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin: 0;
+}
+
+.aanbod_ctaBlokTekst__ilm6J {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 300;
+  margin: 0;
+}
+
+.aanbod_ctaBlokBtn__7zZtZ {
+  margin-top: var(--space-3);
+  padding: 16px 36px;
+  border-radius: var(--radius-pill);
+  background: var(--amber);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(247, 156, 29, 0.4);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.aanbod_ctaBlokBtn__7zZtZ:hover {
+  background: #e88e10;
+  box-shadow: 0 6px 20px rgba(247, 156, 29, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .aanbod_contentLinks__5ztEb,
+  .aanbod_contentRechts__tVPhX {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .aanbod_contentRechts__tVPhX > * {
+    direction: ltr;
+  }
+
+  .aanbod_productAfbeelding__HevAW {
+    order: -1;
+  }
+
+  .aanbod_productImg__j29At {
+    height: 320px;
+  }
+
+  .aanbod_heroTitel__P3CDv {
+    font-size: clamp(2.4rem, 8vw, 4rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .aanbod_heroNav__CGUyr {
+    gap: var(--space-2);
+  }
+
+  .aanbod_heroNavItem__6UN87 {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+
+  .aanbod_productCta__koHcB {
+    flex-direction: column;
+  }
+
+  .aanbod_ctaBtn__heJ_P {
+    width: 100%;
+    justify-content: center;
+  }
+}

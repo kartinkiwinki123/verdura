@@ -1,0 +1,85 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  background: rgba(249, 249, 249, 0.746);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(14, 64, 42, 0.07);
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+/* ─── Logo ─────────────────────────────────────────────────────────────── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+}
+
+.logoLeaf {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.logoText {
+    font-family: 'Elms Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--green-deep);
+  letter-spacing: -0.02em;
+}
+
+/* ─── Links ─────────────────────────────────────────────────────────────── */
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  list-style: none;
+}
+
+.link {
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.link:hover {
+  color: var(--green-deep);
+  background: var(--green-light);
+}
+
+.linkActive {
+  color: var(--green-deep);
+  font-weight: 500;
+  background: var(--green-light);
+}
+
+/* ─── CTA ─────────────────────────────────────────────────────────────── */
+.ctaBtn {
+  font-size: 0.85rem !important;
+  padding: 10px 20px !important;
+}
+
+/* ─── Mobile ─────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .ctaBtn {
+    font-size: 0.8rem !important;
+    padding: 9px 16px !important;
+  }
+}

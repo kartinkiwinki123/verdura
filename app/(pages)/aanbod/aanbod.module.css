@@ -1,0 +1,579 @@
+/* ─── MAIN ────────────────────────────────────────────────────────────── */
+.main {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ─── HERO ────────────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  padding: var(--space-24) 0 var(--space-16);
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 20%, rgba(50, 164, 67, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 10% 80%, rgba(247, 156, 29, 0.06) 0%, transparent 50%),
+    var(--surface-bg);
+  z-index: 0;
+}
+
+.heroBgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 64, 42, 0.25);
+  z-index: 1;
+}
+
+.heroGlass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12) var(--space-10);
+  max-width: 960px;
+  z-index: 2;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 3;
+  /* rest blijft hetzelfde */
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.heroLabel {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: var(--space-5);
+  animation: fadeUp 0.5s ease forwards;
+}
+
+.heroTitel {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 300;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: var(--green-light);
+  max-width: 820px;
+  margin-bottom: var(--space-6);
+  animation: fadeUp 0.6s 0.1s ease both;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.169);
+}
+
+.heroAccent {
+  color: var(--green-mid);
+  font-style: italic;
+}
+
+.heroAccentTwee {
+  color: var(green--light);
+  font-weight: 800;
+}
+
+.heroSubtitel {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--linen);
+  max-width: 580px;
+  font-weight: 300;
+  margin-bottom: var(--space-12);
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+
+.heroNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  animation: fadeUp 0.6s 0.32s ease both;
+}
+
+.heroNavItem {
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(14, 64, 42, 0.15);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2a2a2a;
+  background: var(--gold-light);
+  transition: all 0.18s ease;
+  text-decoration: none;
+}
+
+.heroNavItem:hover {
+  border-color: var(--green-mid);
+  color: var(--green-deep);
+  background: var(--green-light);
+  transform: translateY(-1px);
+}
+
+.heroScroll {
+  position: absolute;
+  bottom: var(--space-10);
+  left: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  animation: fadeIn 0.8s 0.6s ease both;
+}
+
+.scrollLine {
+  width: 48px;
+  height: 1px;
+  background: var(--green-muted);
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollLine::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--green-mid);
+  animation: scrollSlide 1.8s ease infinite;
+}
+
+@keyframes scrollSlide {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ─── PRODUCT BLOK ────────────────────────────────────────────────────── */
+.productBlok {
+  padding: var(--space-24) 0;
+  position: relative;
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.productBlok.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.productBlok.licht {
+  background: var(--surface-bg);
+}
+
+.productBlok.donker {
+  background: var(--green-deep);
+}
+
+.productBlok.donker .productNaam,
+.productBlok.donker .productTagline,
+.productBlok.donker .productIntro,
+.productBlok.donker .productExtra,
+.productBlok.donker .productNummer,
+.productBlok.donker .voordeel {
+  color: var(--text-inverse);
+}
+
+.productBlok.donker .checkIcon svg circle {
+  fill-opacity: 0.2;
+}
+
+.productBlok.donker .ctaBtnOutline {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.productBlok.donker .ctaBtnOutline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.productInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.productContent {
+  display: grid;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.contentLinks {
+  grid-template-columns: 1fr 1fr;
+}
+
+.contentRechts {
+  grid-template-columns: 1fr 1fr;
+  direction: rtl;
+}
+
+.contentRechts > * {
+  direction: ltr;
+}
+
+.productText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.productMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.badge_amber {
+  background: #FFF4D9;
+  color: #A06600;
+}
+
+.badge_green {
+  background: var(--green-light);
+  color: var(--green-deep);
+}
+
+.badge_sky {
+  background: var(--sky-pale);
+  color: #1A4A8A;
+}
+
+.productBlok.donker .badge_green {
+  background: rgba(232, 245, 236, 0.15);
+  color: var(--green-muted);
+}
+
+.productBlok.donker .badge_amber {
+  background: rgba(255, 244, 217, 0.15);
+  color: var(--pollen);
+}
+
+.productBlok.donker .badge_sky {
+  background: rgba(212, 228, 249, 0.15);
+  color: var(--sky-pale);
+}
+
+.productNummer {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.productNaam {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.productTagline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.productBlok.donker .productTagline {
+  color: var(--pollen);
+}
+
+.productIntro {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin: 0;
+}
+
+.voordelen {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 0;
+  margin: 0;
+}
+
+.voordeel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.productExtra {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-weight: 300;
+  font-style: italic;
+  border-left: 2px solid var(--green-muted);
+  padding-left: var(--space-4);
+  margin: 0;
+}
+
+.productBlok.donker .productExtra {
+  border-left-color: rgba(182, 217, 190, 0.3);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.productCta {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 26px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  cursor: pointer;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-1px);
+}
+
+.ctaBtnPrimary {
+  background: var(--green-mid);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(50, 164, 67, 0.3);
+}
+
+.ctaBtnPrimary:hover {
+  background: #2d9a3d;
+  box-shadow: 0 4px 16px rgba(50, 164, 67, 0.4);
+}
+
+.ctaBtnOutline {
+  background: transparent;
+  color: var(--green-deep);
+  border: 1.5px solid var(--green-mid);
+}
+
+.ctaBtnOutline:hover {
+  background: var(--green-light);
+}
+
+/* ─── AFBEELDING ──────────────────────────────────────────────────────── */
+.productAfbeelding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.afbeeldingWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.productImg {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-xl);
+  transition: transform 0.5s ease;
+}
+
+.afbeeldingWrapper:hover .productImg {
+  transform: scale(1.03);
+}
+
+.afbeeldingGlow {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(
+    135deg,
+    rgba(50, 164, 67, 0.08) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.productBlok.donker .afbeeldingGlow {
+  background: linear-gradient(
+    135deg,
+    rgba(247, 156, 29, 0.1) 0%,
+    transparent 60%
+  );
+}
+
+/* ─── CTA BLOK ────────────────────────────────────────────────────────── */
+.ctaBlok {
+  background: var(--green-deep);
+  padding: var(--space-24) 0;
+  text-align: center;
+}
+
+.ctaBlokInner {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.ctaBlokLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-muted);
+}
+
+.ctaBlokTitel {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin: 0;
+}
+
+.ctaBlokTekst {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 300;
+  margin: 0;
+}
+
+.ctaBlokBtn {
+  margin-top: var(--space-3);
+  padding: 16px 36px;
+  border-radius: var(--radius-pill);
+  background: var(--amber);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(247, 156, 29, 0.4);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.ctaBlokBtn:hover {
+  background: #e88e10;
+  box-shadow: 0 6px 20px rgba(247, 156, 29, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .contentLinks,
+  .contentRechts {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .contentRechts > * {
+    direction: ltr;
+  }
+
+  .productAfbeelding {
+    order: -1;
+  }
+
+  .productImg {
+    height: 320px;
+  }
+
+  .heroTitel {
+    font-size: clamp(2.4rem, 8vw, 4rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .heroNav {
+    gap: var(--space-2);
+  }
+
+  .heroNavItem {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+
+  .productCta {
+    flex-direction: column;
+  }
+
+  .ctaBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

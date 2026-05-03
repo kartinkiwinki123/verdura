@@ -1,0 +1,193 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./app/contact/page.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+/* ─── Hero ─────────────────────────────────────────────────────────────── */
+.page_hero__BA5ON {
+  background: var(--green-deep);
+  padding: var(--space-16) 0 var(--space-12);
+}
+
+.page_heroContent__81yhc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 620px;
+}
+
+.page_heroTitle__VilE1 {
+  color: var(--white);
+}
+
+.page_heroSub__g28q9 {
+  color: rgba(255,255,255,0.68);
+}
+
+/* ─── Main grid ─────────────────────────────────────────────────────────── */
+.page_mainGrid__McKqD {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  grid-gap: var(--space-10);
+  gap: var(--space-10);
+  align-items: start;
+}
+
+/* ─── Info side ─────────────────────────────────────────────────────────── */
+.page_infoSide__pXYYf {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-6));
+}
+
+.page_infoCard__mh7oG {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.page_infoTitle__nFpQg {
+  color: var(--green-deep);
+}
+
+.page_infoList__KXFXW {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.page_infoItem__OjbML {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.page_infoIcon__2gYvp {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.page_infoText____NqD {
+  color: var(--text-secondary);
+}
+
+.page_contactDetails__Tw_IG {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.page_contactDetail__HFoFA {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.page_contactDetailIcon__PGwmV {
+  font-size: 1rem;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+/* ─── Subsidie hint ─────────────────────────────────────────────────────── */
+.page_subsidieHint__35cmk {
+  background: var(--linen);
+  border: 1px solid rgba(247,156,29,0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.page_subsidieHintText__vMGGS {
+  color: var(--text-secondary);
+}
+
+/* ─── Form side ─────────────────────────────────────────────────────────── */
+.page_formSide__g0wiI {}
+
+.page_form__T90SA {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.page_formTitle__HUL7Z {
+  color: var(--green-deep);
+  font-size: 1.1rem;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--platinum);
+}
+
+.page_formRow__yH1si {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--space-4);
+  gap: var(--space-4);
+}
+
+.page_submitBtn__xjhe9 {
+  width: 100%;
+  justify-content: center;
+  margin-top: var(--space-2);
+}
+
+.page_formDisclaimer__mfYia {
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.page_errorMsg__xbDfH {
+  background: #FFF0F0;
+  border: 1px solid #FFCDD2;
+  color: #C62828;
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-size: 0.875rem;
+}
+
+/* ─── Success card ──────────────────────────────────────────────────────── */
+.page_successCard__bdntR {
+  padding: var(--space-16) var(--space-10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-6);
+}
+
+.page_successIcon__bcUO_ {
+  font-size: 4rem;
+  animation: page_fadeUp__a8te4 0.5s ease;
+}
+
+/* ─── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .page_mainGrid__McKqD {
+    grid-template-columns: 1fr;
+  }
+  .page_infoSide__pXYYf {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .page_formRow__yH1si {
+    grid-template-columns: 1fr;
+  }
+  .page_form__T90SA {
+    padding: var(--space-6);
+  }
+  .page_infoCard__mh7oG {
+    padding: var(--space-6);
+  }
+}
+
